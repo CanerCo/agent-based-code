@@ -20,6 +20,48 @@ This notebook demonstrates how to build and interact with intelligent retrieval-
 - **LangChain & BM25Retriever**: Powers vectorized and keyword-based document retrieval  
 - **Example Queries**: Includes sample prompts for retrieving PhD research topics  
 
+
+# ntb2-tool-calling-agents
+
+This Python script demonstrates how to create, use, and share custom AI-powered tools using the [`smolagents`](https://pypi.org/project/smolagents/) framework in conjunction with Hugging Face services. It includes several examples of defining, deploying, and importing tools and agents for tasks like restaurant recommendations, PhD topic generation, and image generation.
+
+---
+
+## 🚀 Features
+
+- **🔧 Tool Definition using Decorators**  
+  Use the `@tool` decorator to define simple tools (e.g., highest-rated restaurant finder).
+
+- **📦 Class-Based Tool Creation**  
+  Create structured tools like `PhdIdeasTopicTool` for generating research topics.
+
+- **🤗 Hugging Face Integration**  
+  - Authenticate and access the Hugging Face Inference API.
+  - Push custom tools to the Hub.
+  - Load tools from the community.
+
+- **🌐 Advanced Tool Loading**
+  - Load tools from Hugging Face Spaces (`Tool.from_space()`).
+  - Use LangChain tools with `Tool.from_langchain()` (requires SERPAPI key).
+  - Load tools from MCP servers for advanced applications.
+
+---
+
+## 🛠️ Requirements
+
+- Python 3.8+
+- `smolagents`
+- `huggingface_hub`
+- `gradio_client`
+- `langchain-community`
+- `google-search-results`
+- `mcp` (optional, for MCP integration)
+
+Install all dependencies with:
+
+```bash
+pip install smolagents gradio_client langchain-community google-search-results "smolagents[mcp]"
+
 ## Use Case
 
 Ideal for students, researchers, or developers interested in:
